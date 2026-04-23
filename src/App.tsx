@@ -19,7 +19,8 @@ const ServiceCard = ({
   delay, 
   icon: Icon,
   accentColor = "neon-blue",
-  status = "READY"
+  status = "READY",
+  link
 }: { 
   title: string; 
   description: string; 
@@ -28,6 +29,7 @@ const ServiceCard = ({
   icon: any;
   accentColor?: string;
   status?: string;
+  link?: string;
 }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
@@ -69,9 +71,14 @@ const ServiceCard = ({
         ) : (
           <span className="mono text-[10px] text-gray-500 uppercase tracking-tighter">Custom Pricing</span>
         )}
-        <button className="text-[10px] uppercase font-bold tracking-widest border-b border-white/20 pb-1 hover:border-white transition-colors">
+        <a 
+          href={link || "#"} 
+          target={link ? "_blank" : undefined}
+          rel={link ? "noopener noreferrer" : undefined}
+          className="text-[10px] uppercase font-bold tracking-widest border-b border-white/20 pb-1 hover:border-white transition-colors"
+        >
           Mehr erfahren →
-        </button>
+        </a>
       </div>
     </div>
   </motion.div>
@@ -203,6 +210,7 @@ export default function App() {
               delay={0.1}
               icon={Presentation}
               status="READY"
+              link="https://vsa-production.up.railway.app"
             />
             <ServiceCard 
               title="Talent Swarm"
