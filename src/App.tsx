@@ -1,13 +1,15 @@
 import { motion } from 'motion/react';
 import { 
   Rocket, 
-  Users, 
+  Bot, 
   Mic2, 
   Target, 
   ChevronRight, 
   ShieldCheck, 
   Zap, 
-  BarChart3 
+  BarChart3,
+  Presentation,
+  Share2
 } from 'lucide-react';
 
 const ServiceCard = ({ 
@@ -90,18 +92,39 @@ export default function App() {
         <div className="hidden md:flex gap-8 text-[10px] uppercase tracking-[0.2em] font-semibold text-gray-400">
           <a href="#services" className="hover:text-white transition-colors">Operations</a>
           <a href="#benefits" className="hover:text-white transition-colors">Technology</a>
-          <a href="#footer" className="hover:text-white transition-colors">Contact</a>
+          <a href="#contact" className="hover:text-white transition-colors">Contact</a>
         </div>
       </nav>
 
       <main className="relative z-10">
         {/* Hero Section */}
         <section className="pt-48 pb-20 px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-7xl mx-auto">
-          <div className="lg:col-span-8">
+          <motion.div 
+            className="lg:col-span-8"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.15,
+                  delayChildren: 0.2,
+                }
+              }
+            }}
+          >
             <motion.h1 
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+              variants={{
+                hidden: { opacity: 0, y: 40, filter: 'blur(10px)', skewY: 2 },
+                visible: { 
+                  opacity: 1, 
+                  y: 0, 
+                  filter: 'blur(0px)', 
+                  skewY: 0,
+                  transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] } 
+                }
+              }}
               className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[0.95] mb-6"
             >
               Dein Agenten-Team.<br />
@@ -109,9 +132,15 @@ export default function App() {
             </motion.h1>
             
             <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
+              variants={{
+                hidden: { opacity: 0, y: 30, filter: 'blur(5px)' },
+                visible: { 
+                  opacity: 1, 
+                  y: 0, 
+                  filter: 'blur(0px)',
+                  transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } 
+                }
+              }}
               className="text-lg text-gray-400 font-light max-w-xl mb-10"
             >
               Vier spezialisierte Schwärme. Ein Ansprechpartner. <br className="hidden md:block" />
@@ -119,9 +148,14 @@ export default function App() {
             </motion.p>
             
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { 
+                  opacity: 1, 
+                  y: 0, 
+                  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } 
+                }
+              }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="bg-neon-green text-black px-8 py-4 font-bold text-sm uppercase tracking-wider rounded-sm hover:opacity-90 transition-all glow-green">
@@ -133,9 +167,15 @@ export default function App() {
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, scale: 0.95, y: 20 },
+                visible: { 
+                  opacity: 1, 
+                  scale: 1, 
+                  y: 0, 
+                  transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } 
+                }
+              }}
               className="mt-12"
             >
               <button className="group relative w-full sm:w-auto px-10 py-5 bg-white text-black font-black uppercase tracking-[0.3em] text-sm hover:bg-neon-blue transition-all duration-500 overflow-hidden">
@@ -150,7 +190,7 @@ export default function App() {
                 <span>30-min Deep Dive</span>
               </div>
             </motion.div>
-          </div>
+          </motion.div>
         </section>
 
         {/* Services Grid */}
@@ -161,14 +201,14 @@ export default function App() {
               description="Investoren-Pitchdeck in 48 Stunden. Strategische Exzellenz trifft auf High-End Design. Komplett KI-optimiert."
               price="249 €"
               delay={0.1}
-              icon={Rocket}
+              icon={Presentation}
               status="READY"
             />
             <ServiceCard 
               title="Talent Swarm"
               description="Recruiting on Demand. Unsere Agenten finden, screenen und qualifizieren deine Kandidaten autonom."
               delay={0.2}
-              icon={Users}
+              icon={Bot}
               accentColor="gray-600"
               status="ON-DEMAND"
             />
@@ -184,7 +224,7 @@ export default function App() {
               title="Forge Reach"
               description="Marketing & Lead-Generierung durch Agenten-Teams. Wir positionieren dich am Markt."
               delay={0.4}
-              icon={Target}
+              icon={Share2}
               accentColor="gray-600"
               status="BETA"
             />
@@ -225,6 +265,71 @@ export default function App() {
                   {client}
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Form Section */}
+        <section id="contact" className="px-8 py-32 max-w-4xl mx-auto border-t border-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+              <h2 className="text-4xl font-bold tracking-tight mb-6 uppercase">
+                Let's Build Your <span className="text-neon-blue">Swarm</span>
+              </h2>
+              <p className="text-gray-400 mb-10 leading-relaxed">
+                Initializing connection protocol. Send your requirements below and our core agents will reach out within one business cycle.
+              </p>
+              
+              <div className="space-y-6">
+                <div className="flex gap-4 items-center">
+                  <div className="w-10 h-10 border border-white/10 flex items-center justify-center text-neon-blue">
+                    <Target size={18} />
+                  </div>
+                  <div className="mono text-[10px] uppercase tracking-widest text-gray-500">
+                    Location: Decentralized // Hybrid_Ops
+                  </div>
+                </div>
+                <div className="flex gap-4 items-center">
+                  <div className="w-10 h-10 border border-white/10 flex items-center justify-center text-neon-green">
+                    <Mic2 size={18} />
+                  </div>
+                  <div className="mono text-[10px] uppercase tracking-widest text-gray-500">
+                    Signal: hello@augmentedops.ki
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="glass-card p-8 border border-white/5">
+              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                <div className="space-y-2">
+                  <label className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Identity</label>
+                  <input 
+                    type="text" 
+                    placeholder="Your Name" 
+                    className="w-full bg-black/40 border border-white/10 px-4 py-3 text-sm focus:outline-none focus:border-neon-blue transition-colors rounded-sm"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Signal Address</label>
+                  <input 
+                    type="email" 
+                    placeholder="Email Address" 
+                    className="w-full bg-black/40 border border-white/10 px-4 py-3 text-sm focus:outline-none focus:border-neon-blue transition-colors rounded-sm"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Transmission</label>
+                  <textarea 
+                    rows={4} 
+                    placeholder="What agents do you need to augment your team?" 
+                    className="w-full bg-black/40 border border-white/10 px-4 py-3 text-sm focus:outline-none focus:border-neon-blue transition-colors rounded-sm resize-none"
+                  ></textarea>
+                </div>
+                <button className="w-full py-4 bg-neon-blue text-black font-black uppercase tracking-[0.2em] text-xs hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(0,240,255,0.2)]">
+                  Transmit Data
+                </button>
+              </form>
             </div>
           </div>
         </section>
