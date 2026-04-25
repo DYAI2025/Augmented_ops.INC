@@ -1,0 +1,194 @@
+/* ════════════════════════════════════════════════════════════════════════
+   AUGMENTED_OPS — Colors & Type
+   Fused Firmament · DYAI2025 · Berlin
+   Primary reference: vsa-production.up.railway.app (VSA live site)
+   Secondary: src/App.tsx (Augmented_Ops.INC repo — neon "ops" variant)
+   ════════════════════════════════════════════════════════════════════════ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+:root {
+  /* ── PRIMARY: TRUST NAVY (VSA/CSA live sites) ─────────────────────── */
+  --ao-navy-900:       #0B1437;   /* darkest — strip bg, CTA gradients */
+  --ao-navy-800:       #13205C;
+  --ao-navy-700:       #1A237E;   /* signature navy — logos, H-accents */
+  --ao-navy-600:       #3949AB;
+  --ao-navy-500:       #5C6BC0;
+  --ao-navy-tint:      #EEF0FB;   /* eyebrow chip bg */
+
+  /* ── INK & SLATE (VSA) ────────────────────────────────────────────── */
+  --ao-ink:            #0F172A;   /* primary copy */
+  --ao-slate-700:      #334155;
+  --ao-slate-500:      #64748B;
+  --ao-slate-400:      #94A3B8;
+  --ao-slate-200:      #E2E8F0;
+  --ao-slate-100:      #F1F5F9;
+  --ao-slate-50:       #F8FAFC;
+  --ao-white:          #FFFFFF;
+
+  /* ── SEMANTIC ─────────────────────────────────────────────────────── */
+  --ao-success:        #059669;   /* done, live, approved */
+  --ao-warn:           #D97706;   /* on hold, pending human */
+  --ao-danger:         #DC2626;   /* only for real errors — rare */
+
+  /* ── NEON "OPS" VARIANT (App.tsx — sub-system for ops dashboards) ── */
+  --ao-black:          #000000;
+  --ao-dark:           #0D0D0D;
+  --ao-neon-blue:      #00F0FF;   /* systems-online accent */
+  --ao-neon-green:     #39FF14;   /* agent-active accent */
+  --ao-glow-blue:      0 0 15px rgba(0, 240, 255, 0.3);
+  --ao-glow-green:     0 0 15px rgba(57, 255, 20, 0.3);
+
+  /* ── SEMANTIC FG/BG ───────────────────────────────────────────────── */
+  --ao-fg-1:           var(--ao-ink);
+  --ao-fg-2:           var(--ao-slate-700);
+  --ao-fg-3:           var(--ao-slate-500);
+  --ao-fg-muted:       var(--ao-slate-400);
+  --ao-bg-1:           var(--ao-white);
+  --ao-bg-2:           var(--ao-slate-50);
+  --ao-bg-3:           var(--ao-slate-100);
+  --ao-border-1:       var(--ao-slate-200);
+  --ao-border-strong:  var(--ao-navy-600);
+  --ao-accent:         var(--ao-navy-700);
+  --ao-link:           var(--ao-navy-700);
+
+  /* Dark mode (ops dashboard) */
+  --ao-fg-dark-1:      rgba(255, 255, 255, 0.95);
+  --ao-fg-dark-2:      rgba(255, 255, 255, 0.65);
+  --ao-fg-dark-3:      rgba(255, 255, 255, 0.40);
+  --ao-bg-dark-1:      var(--ao-black);
+  --ao-bg-dark-2:      var(--ao-dark);
+  --ao-border-dark:    rgba(255, 255, 255, 0.10);
+
+  /* ── TYPOGRAPHY ───────────────────────────────────────────────────── */
+  --ao-font-ui:        "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --ao-font-sans:      "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --ao-font-mono:      "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Type scale — tight, trust-driven, generous H1 */
+  --ao-display:        clamp(2.5rem, 5.5vw, 4.5rem);    /* Hero H1 */
+  --ao-h1:             clamp(2.25rem, 5vw, 3.75rem);
+  --ao-h2:             clamp(1.75rem, 3.5vw, 2.75rem);
+  --ao-h3:             1.25rem;
+  --ao-h4:             1.0625rem;
+  --ao-lede:           1.125rem;
+  --ao-body:           1rem;
+  --ao-body-sm:        0.9375rem;
+  --ao-caption:        0.8125rem;
+  --ao-overline:       0.75rem;    /* eyebrow */
+  --ao-micro:          0.6875rem;  /* mono labels, agent-id */
+  --ao-data:           0.8125rem;  /* JetBrains Mono tabular */
+
+  /* Letter-spacing */
+  --ao-ls-display:     -0.025em;
+  --ao-ls-h1:          -0.025em;
+  --ao-ls-h2:          -0.02em;
+  --ao-ls-h3:          -0.01em;
+  --ao-ls-body:        0em;
+  --ao-ls-overline:    0.12em;     /* eyebrow */
+  --ao-ls-micro:       0.1em;
+  --ao-ls-mega:        0.3em;      /* neon uppercase CTA */
+
+  /* Line height */
+  --ao-lh-display:     1.1;
+  --ao-lh-heading:     1.15;
+  --ao-lh-body:        1.6;
+  --ao-lh-tight:       1.4;
+
+  /* Weights */
+  --ao-weight-body:    400;
+  --ao-weight-medium:  500;
+  --ao-weight-semi:    600;
+  --ao-weight-bold:    700;
+  --ao-weight-black:   800;
+
+  /* ── SPACING (8px base) ───────────────────────────────────────────── */
+  --ao-space-1:        4px;
+  --ao-space-2:        8px;
+  --ao-space-3:        12px;
+  --ao-space-4:        16px;
+  --ao-space-5:        24px;
+  --ao-space-6:        32px;
+  --ao-space-7:        48px;
+  --ao-space-8:        64px;
+  --ao-space-9:        80px;
+  --ao-space-10:       100px;     /* section padding */
+  --ao-space-hero:     160px;     /* hero top pad */
+
+  --ao-container:      1200px;
+  --ao-content:        72ch;
+  --ao-lede-width:     64ch;
+
+  /* ── RADII ────────────────────────────────────────────────────────── */
+  --ao-radius-sm:      6px;       /* agent icon, chip bg */
+  --ao-radius-md:      10px;      /* inputs */
+  --ao-radius-lg:      16px;      /* cards, CTA band */
+  --ao-radius-full:    9999px;    /* pills, buttons, eyebrow */
+
+  /* ── SHADOWS ──────────────────────────────────────────────────────── */
+  --ao-shadow-sm:      0 1px 2px rgba(15,23,42,.06);
+  --ao-shadow-md:      0 4px 12px rgba(15,23,42,.08);
+  --ao-shadow-lg:      0 12px 32px rgba(15,23,42,.12);
+  --ao-shadow-navy:    0 12px 32px -8px rgba(26,35,126,.35);
+  --ao-shadow-navy-hover: 0 16px 36px -8px rgba(26,35,126,.45);
+  --ao-shadow-focus:   0 0 0 3px rgba(57,73,171,.25);
+
+  /* Neon glow (ops variant) */
+  --ao-shadow-neon-blue:  0 0 15px rgba(0,240,255,.3);
+  --ao-shadow-neon-green: 0 0 15px rgba(57,255,20,.3);
+
+  /* ── MOTION ───────────────────────────────────────────────────────── */
+  --ao-ease-out:       cubic-bezier(0.16, 1, 0.3, 1);
+  --ao-ease-in-out:    cubic-bezier(0.4, 0, 0.2, 1);
+  --ao-dur-fast:       0.15s;
+  --ao-dur-base:       0.2s;
+  --ao-dur-mid:        0.3s;
+  --ao-dur-slow:       0.6s;
+
+  /* ── BACKGROUND RECIPES ───────────────────────────────────────────── */
+  --ao-bg-hero:
+    radial-gradient(ellipse 70% 60% at 80% 20%, rgba(57,73,171,.08), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 15% 0%, rgba(26,35,126,.08), transparent 60%),
+    linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+
+  --ao-bg-cta-band:
+    linear-gradient(135deg, var(--ao-navy-900) 0%, var(--ao-navy-700) 100%);
+
+  --ao-bg-ops-dark:
+    radial-gradient(1000px 700px at 100% 0%, rgba(0,240,255,.05), transparent 60%),
+    radial-gradient(800px 600px at 0% 100%, rgba(57,255,20,.05), transparent 60%),
+    #000000;
+
+  /* Glass (neon variant) */
+  --ao-glass-dark:     rgba(13, 13, 13, 0.8);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   SEMANTIC UTILITY CLASSES
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* Display / headings */
+.ao-display { font-family: var(--ao-font-ui); font-weight: 800; font-size: var(--ao-display); line-height: var(--ao-lh-display); letter-spacing: var(--ao-ls-display); color: var(--ao-fg-1); }
+.ao-h1      { font-family: var(--ao-font-ui); font-weight: 800; font-size: var(--ao-h1);      line-height: var(--ao-lh-heading); letter-spacing: var(--ao-ls-h1);      color: var(--ao-fg-1); }
+.ao-h2      { font-family: var(--ao-font-ui); font-weight: 800; font-size: var(--ao-h2);      line-height: var(--ao-lh-heading); letter-spacing: var(--ao-ls-h2);      color: var(--ao-fg-1); }
+.ao-h3      { font-family: var(--ao-font-ui); font-weight: 700; font-size: var(--ao-h3);      line-height: var(--ao-lh-heading); letter-spacing: var(--ao-ls-h3);      color: var(--ao-fg-1); }
+.ao-h4      { font-family: var(--ao-font-ui); font-weight: 700; font-size: var(--ao-h4);      line-height: var(--ao-lh-heading); color: var(--ao-fg-1); }
+
+/* Body */
+.ao-lede    { font-family: var(--ao-font-ui); font-weight: 400; font-size: var(--ao-lede);    line-height: 1.65; color: var(--ao-slate-700); max-width: var(--ao-lede-width); }
+.ao-body    { font-family: var(--ao-font-ui); font-weight: 400; font-size: var(--ao-body);    line-height: var(--ao-lh-body);  color: var(--ao-slate-700); }
+.ao-body-sm { font-family: var(--ao-font-ui); font-weight: 400; font-size: var(--ao-body-sm); line-height: var(--ao-lh-body);  color: var(--ao-slate-700); }
+.ao-caption { font-family: var(--ao-font-ui); font-weight: 400; font-size: var(--ao-caption); line-height: 1.5; color: var(--ao-slate-500); }
+
+/* Support */
+.ao-overline{ display: inline-block; font-family: var(--ao-font-ui); font-weight: 700; font-size: var(--ao-overline); line-height: 1; letter-spacing: var(--ao-ls-overline); text-transform: uppercase; color: var(--ao-navy-700); background: var(--ao-navy-tint); padding: 6px 12px; border-radius: var(--ao-radius-full); }
+.ao-micro   { font-family: var(--ao-font-mono); font-weight: 600; font-size: var(--ao-micro); line-height: 1; letter-spacing: var(--ao-ls-micro); text-transform: uppercase; color: var(--ao-slate-500); }
+.ao-mono    { font-family: var(--ao-font-mono); font-variant-numeric: tabular-nums; }
+.ao-data    { font-family: var(--ao-font-mono); font-weight: 400; font-size: var(--ao-data);  font-variant-numeric: tabular-nums; color: var(--ao-slate-700); }
+
+/* Theme modes */
+.ao-light { background: var(--ao-white); color: var(--ao-ink); }
+.ao-ops   { background: var(--ao-bg-ops-dark); color: var(--ao-fg-dark-1); }
+
+/* Selection */
+::selection { background: var(--ao-navy-700); color: #fff; }

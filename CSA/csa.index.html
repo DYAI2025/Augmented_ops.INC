@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CSA — Customer Support Agency · Support gelöst von autonomem KI-Mesh</title>
+<meta name="description" content="CSA ist eine autonome KI-Support-Agentur. Ein Mesh spezialisierter Agenten übernimmt Ticket-Triage, Resolving, Helpcenter und Voice-Support. Human-in-the-loop bei Eskalationen. Fused Firmament · Berlin." />
+<meta name="author" content="Fused Firmament · Benjamin Poersch" />
+<meta name="keywords" content="KI Customer Support, AI Chatbot, Ticket Automatisierung, Voice Agent, Helpcenter AI, 24/7 Support, Human-in-the-loop AI, Berlin, DSGVO, Augmented_Ops" />
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+
+<link rel="canonical" href="https://csa.dyai.cloud/" />
+<link rel="alternate" hreflang="de" href="https://csa.dyai.cloud/" />
+<link rel="alternate" hreflang="en" href="https://csa.dyai.cloud/en/" />
+<link rel="alternate" hreflang="x-default" href="https://csa.dyai.cloud/" />
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="CSA — Customer Support Agency" />
+<meta property="og:title" content="CSA · Autonome KI-Support-Agentur. Freigegeben von dir." />
+<meta property="og:description" content="Mesh spezialisierter Support-Agenten: Triage, Resolving, Voice, Eskalation. 30s Time-to-Resolution. 100 % Human-in-the-loop bei komplexen Fällen." />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:url" content="https://csa.dyai.cloud/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="CSA · KI-Support mit Human-Gate" />
+<meta name="twitter:description" content="Autonome Support-Agentur. B2B & E-Commerce. DSGVO Art. 22. Berlin." />
+
+<!-- AI-native meta -->
+<meta name="ai-content-declaration" content="This site is partially produced by an autonomous AI agent mesh. Human approval is applied before any sensitive knowledge base change is published or complex ticket resolved. Operating entity: Fused Firmament, Berlin." />
+<meta name="ai-purpose" content="B2B service: automated customer support for real, vetted companies. Output: resolved tickets, delivered to end users with human escalation paths." />
+<meta name="ai-operator" content="Fused Firmament · DYAI2025 · Benjamin Poersch" />
+<meta name="ai-training-opt-in" content="Public copy on this page is available for indexing by AI search engines. Client ticket data is NOT available for training and is hosted strictly within the EU." />
+<meta name="ai-data-residency" content="EU · Germany · GDPR Art. 22 compliant · no customer data transferred to non-EU jurisdictions" />
+
+<!-- JSON-LD: Organization + Service + FAQPage + HowTo + BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://csa.dyai.cloud/#org",
+      "name": "CSA — Customer Support Agency",
+      "alternateName": ["Customer Support Agency", "CSA", "Augmented_Ops CSA"],
+      "legalName": "Benjamin Poersch (Fused Firmament · DYAI2025)",
+      "parentOrganization": { "@type": "Organization", "name": "Augmented_Ops", "url": "https://augmentedops.dyai.cloud/" },
+      "url": "https://csa.dyai.cloud/",
+      "email": "contact@dyai.cloud",
+      "telephone": "+49-170-7061239",
+      "founder": { "@type": "Person", "name": "Benjamin Poersch" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grazer Damm 207",
+        "postalCode": "12157",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      },
+      "areaServed": "Worldwide",
+      "knowsAbout": [
+        "AI Customer Support", "Ticket Automation", "AI Chatbot", "Voice Agent",
+        "Helpcenter Generation", "DSGVO Art. 22", "Brand Safety", "Human-in-the-loop AI"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://csa.dyai.cloud/#service",
+      "name": "Autonomous Customer Support",
+      "provider": { "@id": "https://csa.dyai.cloud/#org" },
+      "serviceType": "AI-agent-driven support with human escalation gate",
+      "description": "A mesh of specialized AI agents analyzes tickets, answers emails, handles voice calls, and maintains knowledge bases. Escalations require human review; no complex issue is mishandled autonomously.",
+      "audience": { "@type": "BusinessAudience", "audienceType": "Startup and scale-up Head of Support, COOs, Founders" },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "1500",
+        "description": "Pauschalpreis ab 1500 EUR pro Monat · transparentes Tiering"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Wie schnell werden Tickets gelöst?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Typischerweise in unter 30 Sekunden für Standardanfragen. Unser Resolver-Agent antwortet sofort auf E-Mails oder im Chat basierend auf deiner Wissensbasis." }
+        },
+        { "@type": "Question", "name": "Was passiert bei komplexen Supportfällen?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Der Escalation-Agent erkennt fehlendes Wissen oder emotionale Kunden sofort und routet das Ticket an dein menschliches Team. Wir erzwingen hier einen Human-in-the-loop." }
+        },
+        { "@type": "Question", "name": "Was passiert mit meinen Kundendaten?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Wir arbeiten strikt DSGVO-konform mit EU-Hosting (Deutschland). Kundendaten aus E-Mails oder Chats werden nicht für das Training externer LLMs verwendet." }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "So starten wir deine Support-Automatisierung",
+      "totalTime": "P3D",
+      "step": [
+        { "@type": "HowToStep", "name": "Intake & Knowledge Ingestion", "text": "Scout analysiert deine bisherigen Support-Tickets und FAQs." },
+        { "@type": "HowToStep", "name": "Human Gate · Setup-Freigabe", "text": "Du signierst die Wissensbasis und die Eskalationsregeln." },
+        { "@type": "HowToStep", "name": "Shadowing", "text": "Agenten lesen Tickets mit und entwerfen Antworten zur Prüfung durch dein Team." },
+        { "@type": "HowToStep", "name": "Human Gate · Go-Live-Freigabe", "text": "Du gibst die Agenten für den direkten Kundenkontakt frei." },
+        { "@type": "HowToStep", "name": "Live Ops & Maintenance", "text": "Auditor optimiert täglich und schlägt neue Helpcenter-Artikel vor." }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Augmented_Ops", "item": "https://augmentedops.dyai.cloud/" },
+        { "@type": "ListItem", "position": 2, "name": "CSA · Support", "item": "https://csa.dyai.cloud/" }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="csa-styles.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div style="display:flex;align-items:center;gap:14px">
+      <a href="#top" class="brand" aria-label="CSA — zurück zur Startseite">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="26" height="26" rx="7" fill="#1A237E"/>
+          <path d="M9 10.5l6 9 6-9" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>
+          <span class="brand-text">CSA<span>.</span></span>
+          <span class="brand-sub">Customer Support Agency</span>
+        </span>
+      </a>
+      <a class="parent-pill" href="https://augmentedops.dyai.cloud/">↑ Augmented_Ops</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#agents">Agenten</a></li>
+      <li><a href="#workflow">Workflow</a></li>
+      <li><a href="#pricing">Preise</a></li>
+      <li><a href="#modules">Module</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#kontakt" class="nav-cta">Support automatisieren</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Autonome KI-Support-Agentur · Berlin</span>
+        <h1>Supportfälle, gelöst von einem <span class="accent">Mesh autonomer KI-Agenten.</span> Freigegeben von dir.</h1>
+        <p class="lede">CSA ist eine virtuelle Support-Abteilung, die 24/7 arbeitet. Sechs spezialisierte Agenten übernehmen Ticket-Triage, E-Mail-Responses, Live-Chat und Telefonsupport — innerhalb von 30 Sekunden. Du bestimmst das Wissen und die Eskalations-Regeln. Keine Blackbox, keine Chatbot-Frustration.</p>
+        <div class="hero-ctas">
+          <a href="#kontakt" class="btn btn-primary">
+            Support automatisieren
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a href="#workflow" class="btn btn-ghost">Wie es funktioniert</a>
+        </div>
+        <div class="hero-trust">
+          <span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg>
+            DSGVO · EU-Hosting
+          </span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg>
+            Human-in-the-loop · Art. 22
+          </span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg>
+            Audit-Log pro Ticket
+          </span>
+        </div>
+      </div>
+
+      <aside class="pipe" aria-label="Live-Ticket-Pipeline">
+        <div class="pipe-head">
+          <div class="pipe-head-l">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="pipe-title">Ticket Pipeline · Live</span>
+          </div>
+          <span class="pipe-meta" id="clk"></span>
+        </div>
+        <div class="camp">
+          <div class="camp-icon">T1</div>
+          <div>
+            <div class="camp-name">Login Error - SSO</div>
+            <div class="camp-task">Resolver · 12s Response · Email</div>
+          </div>
+          <span class="status s-live">RESOLVED</span>
+        </div>
+        <div class="camp">
+          <div class="camp-icon">T2</div>
+          <div>
+            <div class="camp-name">Enterprise Billing Dispute</div>
+            <div class="camp-task">Auditor Flag · Sentiment Analysis</div>
+          </div>
+          <span class="status s-review">ESCALATED</span>
+        </div>
+        <div class="camp">
+          <div class="camp-icon">T3</div>
+          <div>
+            <div class="camp-name">Feature Request: API</div>
+            <div class="camp-task">Knowledge · Tagged for PM Team</div>
+          </div>
+          <span class="status s-draft">ROUTED</span>
+        </div>
+        <div class="pipe-footer">
+          <span class="label">Checkpoint 04 / 05 · Triage Complete</span>
+          <span class="gate">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V4a3 3 0 016 0v3"/></svg>
+            Human-Escalation-Gate
+          </span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- METRIC STRIP -->
+<div class="strip">
+  <div class="wrap">
+    <div class="strip-grid">
+      <div><div class="stat-val">30s</div><div class="stat-label">Response Time</div></div>
+      <div><div class="stat-val">83%</div><div class="stat-label">Automated Resolution</div></div>
+      <div><div class="stat-val">5K+</div><div class="stat-label">Tickets / Month</div></div>
+      <div><div class="stat-val">24/7</div><div class="stat-label">Always Online</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- AGENTS -->
+<section id="agents">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Das Mesh</span>
+        <h2>Sechs Agenten. Ein Support-Team.<br/>Kein Burnout.</h2>
+      </div>
+      <p class="lede">Jeder Agent ist ein spezialisiertes Modell mit eigenem Kontext, eigenem Toolset und klaren Freigabegrenzen. Sie arbeiten parallel, tauschen strukturierte Lösungs-Artefakte und geben komplexe Fälle nahtlos an Menschen weiter.</p>
+    </div>
+
+    <div class="agents-grid">
+      <article class="agent-card">
+        <div class="id">AGENT 01 · TRIAGE</div>
+        <h3>Ticketklassifikation</h3>
+        <p>Liest jede eingehende Anfrage, kategorisiert nach Priorität, Sentiment und Thema. Verteilt Tickets sofort an den passenden Workflow.</p>
+        <div class="role"><span class="chip">Sentiment Analysis</span><span class="chip">Routing</span><span class="chip">Priority Tagging</span></div>
+      </article>
+
+      <article class="agent-card">
+        <div class="id">AGENT 02 · RESOLVER</div>
+        <h3>Lösungen & Antworten</h3>
+        <p>Formuliert präzise, markengerechte Antworten. Greift auf deine Wissensbasis zu und löst 83% der Standardfälle vollautonom.</p>
+        <div class="role"><span class="chip">Email Drafts</span><span class="chip">Live Chat</span><span class="chip">Issue Resolution</span></div>
+      </article>
+
+      <article class="agent-card">
+        <div class="id">AGENT 03 · VOICE</div>
+        <h3>Telefon-Agent</h3>
+        <p>Nimmt Anrufe in Echtzeit entgegen, führt Dialoge mit natürlicher Sprachsynthese und dokumentiert das Gespräch nahtlos im CRM.</p>
+        <div class="role"><span class="chip">Voice AI</span><span class="chip">Call Transcription</span><span class="chip">Real-time DB Sync</span></div>
+      </article>
+
+      <article class="agent-card">
+        <div class="id">AGENT 04 · KNOWLEDGE</div>
+        <h3>Helpcenter Pflege</h3>
+        <p>Analysiert gelöste Tickets und schreibt automatisch neue Helpcenter-Artikel, wenn sich Kundenanfragen zu neuen Features häufen.</p>
+        <div class="role"><span class="chip">FAQ Generation</span><span class="chip">Knowledge Base</span><span class="chip">Gap Analysis</span></div>
+      </article>
+
+      <article class="agent-card">
+        <div class="id">AGENT 05 · ESCALATION</div>
+        <h3>Human Routing</h3>
+        <p>Erkennt emotionale Ausreißer, VIP-Kunden oder fehlendes Wissen sofort und übergibt an einen Menschen – inklusive Zusammenfassung.</p>
+        <div class="role"><span class="chip">Human-in-the-loop</span><span class="chip">VIP Detection</span><span class="chip">Summary Briefs</span></div>
+      </article>
+
+      <article class="agent-card">
+        <div class="id">AGENT 06 · AUDITOR</div>
+        <h3>Qualität & Compliance</h3>
+        <p>Prüft jede ausgehende Nachricht gegen DSGVO-Vorgaben und Brand Safety. Stellt sicher, dass keine sensiblen Daten preisgegeben werden.</p>
+        <div class="role"><span class="chip">GDPR Compliance</span><span class="chip">Brand Safety</span><span class="chip">Quality Assurance</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WORKFLOW -->
+<section id="workflow" class="bg-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Workflow</span>
+        <h2>Von Onboarding zum 24/7 Support — in fünf Zügen.</h2>
+      </div>
+      <p class="lede">Wir trainieren das Mesh nicht auf Gutglück. Kein Agent spricht mit deinen Kunden, bevor du nicht die Leitplanken unterschrieben hast.</p>
+    </div>
+
+    <div class="flow">
+      <div class="flow-step">
+        <div class="num">01 · AGENT</div>
+        <h4>Wissens-Ingestion</h4>
+        <p>Knowledge-Agent liest dein Wiki, alte Tickets und Manuals ein. Erstellt den Ground Truth Graph.</p>
+      </div>
+      <div class="flow-step gate">
+        <div class="num">⌘ HUMAN GATE</div>
+        <h4>Wissens-Freigabe</h4>
+        <p>Du prüfst den Ground Truth und legst harte Grenzen für Eskalationen fest.</p>
+      </div>
+      <div class="flow-step">
+        <div class="num">02 · AGENT</div>
+        <h4>Shadow Mode</h4>
+        <p>Agenten lesen Tickets mit, entwerfen Antworten, senden diese aber nur intern zur Prüfung.</p>
+      </div>
+      <div class="flow-step gate">
+        <div class="num">⌘ HUMAN GATE</div>
+        <h4>Go-Live Freigabe</h4>
+        <p>Du bestätigst die Qualität der Entwürfe und signierst die Freischaltung des Meshes.</p>
+      </div>
+      <div class="flow-step">
+        <div class="num">03 · AGENT</div>
+        <h4>Live Ops & Maintenance</h4>
+        <p>Das Mesh übernimmt 83% der Last. Eskalationen landen sauber aufbereitet bei deinem Team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section id="principles">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Betriebsprinzipien</span>
+        <h2>Warum Customer Support von Agenten geführt sicher ist.</h2>
+      </div>
+      <p class="lede">Eine Agentur, die direkt mit deinen Kunden kommuniziert, darf nicht halluzinieren. Diese Regeln sind unsere Firmware.</p>
+    </div>
+
+    <div class="principles">
+      <article class="principle">
+        <div class="k">PRINZIP 01</div>
+        <h3>Keine Blackbox Antworten</h3>
+        <p>Jede Antwort eines Agenten beinhaltet intern einen Confidence-Score und Quellenverweise aus deiner Knowledge-Base. Nichts wird "erfunden".</p>
+      </article>
+      <article class="principle">
+        <div class="k">PRINZIP 02</div>
+        <h3>Eskalation ist kein Versagen</h3>
+        <p>Wenn das Mesh unsicher ist, eskaliert es. Das ist ein Feature, kein Bug. Wir optimieren auf höchste Qualität, nicht nur auf Deflection-Rates.</p>
+      </article>
+      <article class="principle">
+        <div class="k">PRINZIP 03</div>
+        <h3>Vollständiges Audit-Log</h3>
+        <p>Jede Entscheidung der Triage, jeder Entwurf des Resolvers und jede Prüfung des Auditors wird protokolliert und ist für dich einsehbar.</p>
+      </article>
+      <article class="principle">
+        <div class="k">PRINZIP 04</div>
+        <h3>Compliance by Design</h3>
+        <p>Sensible Kundendaten (PII) werden vor der Verarbeitung durch LLMs anonymisiert oder maskiert. Volle DSGVO und Art. 22 Konformität.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES / MODULES -->
+<section id="modules" class="bg-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Service Module</span>
+        <h2>Support-Bausteine, die skalieren.</h2>
+      </div>
+      <p class="lede">Unsere Agenten beherrschen die gesamte Bandbreite des modernen Kundenservice. Wähle die Module, die deinen Engpass lösen.</p>
+    </div>
+
+    <div class="roles">
+      <div class="role-pill"><span class="name">AI Ticket Resolution</span><span class="stat">Zendesk / Intercom / Jira</span></div>
+      <div class="role-pill"><span class="name">Automated Email</span><span class="stat">Gmail / Outlook Integration</span></div>
+      <div class="role-pill"><span class="name">AI Chatbot</span><span class="stat">Echtzeit Web-Chat</span></div>
+      <div class="role-pill"><span class="name">AI Voice Agent</span><span class="stat">24/7 Telefonannahme</span></div>
+      <div class="role-pill"><span class="name">Knowledge Base Auto-Update</span><span class="stat">Helpcenter Pflege</span></div>
+      <div class="role-pill"><span class="name">Automated Triage</span><span class="stat">Smart Routing</span></div>
+      <div class="role-pill"><span class="name">Sentiment Alerts</span><span class="stat">Proaktives Churn-Management</span></div>
+      <div class="role-pill"><span class="name">Multilingual Support</span><span class="stat">Übersetzung in 30+ Sprachen</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Preise</span>
+        <h2>Planbare Kosten, lineare Skalierung.</h2>
+      </div>
+      <p class="lede">Bezahle für gelöste Tickets und bereitgestellte Infrastruktur, nicht für Leerlauf und Krankentage. 24/7 Abdeckung ab Tag 1.</p>
+    </div>
+
+    <div class="pricing">
+      <article class="price">
+        <div class="tier">STARTER</div>
+        <div class="val">1.500 €<small> / Monat</small></div>
+        <div class="sub">Für Startups und kleine Teams</div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg> Bis 2.000 Tickets/Monat</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg> Email &amp; Web-Chat Integration</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg> Automated Triage</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg> Human Escalation Flow</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-ghost">Anfragen</a>
+      </article>
+
+      <article class="price featured">
+        <div class="tier">SCALE</div>
+        <div class="val">4.900 €<small> / Monat</small></div>
+        <div class="sub">Vollwertiger 24/7 Support-Desk</div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg> Bis 10.000 Tickets/Monat</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg> Inklusive Voice Agent</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg> Knowledge Base Auto-Update</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg> Sentiment Alerts</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg> Multilingual (30+ Sprachen)</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-primary">Scale buchen
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </article>
+
+      <article class="price">
+        <div class="tier">ENTERPRISE</div>
+        <div class="val">Custom<small></small></div>
+        <div class="sub">Für Enterprise SLAs</div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg> Unlimitiertes Volumen</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg> Custom Agent Training</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg> On-Premise Integrationen</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg> Dedizierter Success Manager</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-ghost">Gespräch anfragen</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="bg-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">FAQ</span>
+        <h2>Häufig gefragt, kurz beantwortet.</h2>
+      </div>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>Wie schnell werden Tickets gelöst?</summary>
+        <div class="faq-body">Typischerweise in unter 30 Sekunden für Standardanfragen. Unser Resolver-Agent antwortet sofort auf E-Mails oder im Chat basierend auf deiner Wissensbasis.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Was passiert bei komplexen Supportfällen?</summary>
+        <div class="faq-body">Der Escalation-Agent erkennt fehlendes Wissen oder emotionale Kunden sofort und routet das Ticket inklusive Zusammenfassung an dein menschliches Team. Wir erzwingen hier einen Human-in-the-loop.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Was passiert mit meinen Kundendaten?</summary>
+        <div class="faq-body">Wir arbeiten strikt DSGVO-konform mit EU-Hosting (Deutschland). Kundendaten aus E-Mails oder Chats werden nicht für das Training externer LLMs verwendet und vor LLM-Aufrufen nach Möglichkeit maskiert.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section id="kontakt">
+  <div class="wrap">
+    <div class="cta-band">
+      <span class="eyebrow" style="background:rgba(255,255,255,.12);color:#fff">Support automatisieren</span>
+      <h2>Dein neues 24/7 Support-Team wartet auf den Einsatz.</h2>
+      <p class="lede">Kontaktiere uns für eine Live-Demo mit deinen eigenen FAQ-Daten.</p>
+      <div class="hero-ctas">
+        <a href="mailto:contact@dyai.cloud?subject=Demo%20anfragen%20%E2%80%94%20CSA" class="btn btn-primary">
+          Demo anfragen
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+      <div class="cta-contact">
+        <span>contact@dyai.cloud</span>
+        <span>·</span>
+        <span>+49 170 706 12 39</span>
+        <span>·</span>
+        <span>Grazer Damm 207 · 12157 Berlin</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="brand">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+            <rect x="2" y="2" width="26" height="26" rx="7" fill="#fff"/>
+            <path d="M9 10.5l6 9 6-9" stroke="#1A237E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>
+            <span class="brand-text" style="color:#fff">CSA<span style="color:#5C6BC0">.</span></span>
+            <span class="brand-sub">Customer Support Agency</span>
+          </span>
+        </a>
+        <p>Autonome KI-Support-Agentur. Teil der Augmented_Ops-Holding. Fused Firmament · DYAI2025 · Berlin. Built by the mesh. Approved by the human.</p>
+        <div class="foot-family">
+          <a href="https://augmentedops.dyai.cloud/">↑ Augmented_Ops</a>
+          <a href="https://vsa.dyai.cloud/">VSA</a>
+          <a class="active" href="/">CSA</a>
+          <a href="https://rsa.dyai.cloud/">RSA</a>
+          <a href="https://msa.dyai.cloud/">MSA</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Service</h5>
+        <ul>
+          <li><a href="#agents">Das Mesh</a></li>
+          <li><a href="#workflow">Workflow</a></li>
+          <li><a href="#pricing">Preise</a></li>
+          <li><a href="#modules">Module</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Firma</h5>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="/investoren/">Investoren</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="/impressum/">Impressum</a></li>
+          <li><a href="/datenschutz/">Datenschutz</a></li>
+          <li><a href="/agb/">AGB</a></li>
+          <li><a href="/toms/">TOMs · DSGVO</a></li>
+          <li><a href="/ai-policy/">AI-Policy · Art. 22</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Fused Firmament · DYAI2025 · Benjamin Poersch</span>
+      <span>DSGVO · Art. 22 · EU-Hosting · built by mesh · approved by human</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var el = document.getElementById("clk");
+    if (!el) return;
+    function pad(n){return n<10?"0"+n:n}
+    function tick(){
+      var d = new Date();
+      el.textContent = pad(d.getUTCHours())+":"+pad(d.getUTCMinutes())+":"+pad(d.getUTCSeconds())+" UTC";
+    }
+    tick(); setInterval(tick, 1000);
+  })();
+</script>
+</body>
+</html>

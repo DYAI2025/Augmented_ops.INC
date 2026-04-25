@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>VSA — Virtual Service Agency · AI-Agenten erstellen Investoren-Decks</title>
+<meta name="description" content="VSA ist eine autonome KI-Agentur. Ein Mesh spezialisierter Agenten recherchiert, strukturiert, schreibt und gestaltet Investoren-Decks für reale Startups. Human-in-the-loop bei jedem Freigabepunkt. Fused Firmament · Berlin." />
+<meta name="keywords" content="Investoren Deck, Pitch Deck Agentur, KI Agentur, AI Agents, autonome Agenten, Seed Deck, Series A, Startup Pitch, Due Diligence, Berlin, DSGVO, Fundraising, AI SEO" />
+<meta name="author" content="Fused Firmament · Benjamin Poersch" />
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+<link rel="canonical" href="https://vsa.dyai.cloud/" />
+<link rel="alternate" hreflang="de" href="https://vsa.dyai.cloud/" />
+<link rel="alternate" hreflang="en" href="https://vsa.dyai.cloud/en/" />
+<link rel="alternate" hreflang="x-default" href="https://vsa.dyai.cloud/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="VSA — Virtual Service Agency" />
+<meta property="og:title" content="VSA · AI-Agenten bauen Investoren-Decks für reale Unternehmen" />
+<meta property="og:description" content="Autonomes Agenten-Mesh. Recherche, Narrativ, Financials, Design. Human-in-the-loop bei jeder Freigabe." />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:url" content="https://vsa.dyai.cloud/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="VSA · AI-Agenten bauen Investoren-Decks" />
+<meta name="twitter:description" content="Autonome KI-Agentur. Human-in-the-loop. Berlin." />
+
+<meta name="ai-content-declaration" content="This site is partially produced by an autonomous AI agent mesh. Human approval (CEO gate) is applied before publication. Operating entity: Fused Firmament, Berlin." />
+<meta name="ai-purpose" content="B2B service: automated investor deck production for real, vetted companies (seed to Series B)." />
+<meta name="ai-operator" content="Fused Firmament · DYAI2025 · Benjamin Poersch" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://vsa.dyai.cloud/#org",
+      "name": "VSA — Virtual Service Agency",
+      "alternateName": ["Virtual Service Agency", "VSA"],
+      "legalName": "Benjamin Poersch (Fused Firmament · DYAI2025)",
+      "url": "https://vsa.dyai.cloud/",
+      "email": "contact@dyai.cloud",
+      "telephone": "+49-170-7061239",
+      "founder": { "@type": "Person", "name": "Benjamin Poersch" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grazer Damm 207",
+        "postalCode": "12157",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      },
+      "areaServed": "Worldwide",
+      "knowsAbout": ["Investor Pitch Decks","AI Agents","Autonomous Workflows","Venture Capital Fundraising","Startup Due Diligence","Human-in-the-loop AI"]
+    },
+    {
+      "@type": "Service",
+      "name": "Autonomous Investor Deck Production",
+      "provider": { "@id": "https://vsa.dyai.cloud/#org" },
+      "serviceType": "AI-agent-driven deck creation with human approval gate",
+      "description": "A mesh of specialized AI agents produces investor-grade pitch decks for real companies. The founder or CEO reviews and approves each milestone; nothing ships without a human signature.",
+      "audience": { "@type": "BusinessAudience", "audienceType": "Startup founders, VC-backed CEOs, seed to Series B" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Was ist VSA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "VSA (Virtual Service Agency) ist eine autonome KI-Agentur. Ein Mesh spezialisierter Agenten übernimmt Recherche, Narrativ, Financials und Design eines Investoren-Decks. Der CEO prüft und gibt jede Stufe frei." }
+        },
+        { "@type": "Question", "name": "Wer haftet für die Inhalte?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Jede Deck-Aussage wird vom Gründer oder CEO vor Versand freigegeben. VSA liefert Quellen, der Mensch trägt die finale Verantwortung." }
+        },
+        { "@type": "Question", "name": "Wie lange dauert ein Deck?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ein Seed-Deck entsteht typischerweise in 48 bis 96 Stunden." }
+        },
+        { "@type": "Question", "name": "DSGVO-Konformität?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Vollständig DSGVO-konform. Verantwortliche Stelle: Benjamin Poersch, Grazer Damm 207, 12157 Berlin." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root{
+  --navy-900:#0B1437;
+  --navy-800:#13205C;
+  --navy-700:#1A237E;
+  --navy-600:#3949AB;
+  --navy-500:#5C6BC0;
+  --ink:#0F172A;
+  --slate-700:#334155;
+  --slate-500:#64748B;
+  --slate-400:#94A3B8;
+  --slate-200:#E2E8F0;
+  --slate-100:#F1F5F9;
+  --slate-50:#F8FAFC;
+  --white:#FFFFFF;
+  --success:#059669;
+  --warn:#D97706;
+  --font-ui:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --r-sm:6px;--r-md:10px;--r-lg:16px;--r-full:9999px;
+  --shadow-sm:0 1px 2px rgba(15,23,42,.06);
+  --shadow-md:0 4px 12px rgba(15,23,42,.08);
+  --shadow-lg:0 12px 32px rgba(15,23,42,.12);
+  --shadow-navy:0 12px 32px -8px rgba(26,35,126,.35);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-ui);
+  line-height:1.6;color:var(--ink);background:var(--white);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+::selection{background:var(--navy-700);color:#fff}
+
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+@media (max-width:640px){.wrap{padding:0 20px}}
+
+/* ── NAV ───────────────────────────── */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--slate-200);
+}
+nav{
+  max-width:1200px;margin:0 auto;padding:16px 32px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy-700)}
+.brand-mark{width:30px;height:30px;display:grid;place-items:center}
+.brand-text{font-weight:800;font-size:1.25rem;letter-spacing:-.01em}
+.brand-text span{color:var(--navy-600)}
+.brand-sub{
+  font-size:.625rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--slate-500);margin-left:6px
+}
+.nav-links{list-style:none;display:flex;gap:32px;align-items:center}
+.nav-links a{
+  color:var(--slate-700);text-decoration:none;font-weight:500;font-size:.9375rem;
+  transition:color .2s
+}
+.nav-links a:hover{color:var(--navy-700)}
+.nav-cta{
+  background:var(--navy-700);color:#fff !important;
+  padding:10px 20px;border-radius:var(--r-full);font-weight:600;
+  transition:all .2s;
+}
+.nav-cta:hover{background:var(--navy-800);box-shadow:var(--shadow-navy)}
+@media (max-width:860px){.nav-links li:not(:last-child){display:none}}
+
+/* ── TYPE ──────────────────────────── */
+h1,h2,h3,h4{font-weight:700;color:var(--ink);letter-spacing:-.02em;line-height:1.15}
+h1{font-size:clamp(2.25rem,5vw,3.75rem);font-weight:800;letter-spacing:-.025em}
+h2{font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:800}
+h3{font-size:1.25rem;font-weight:700}
+.eyebrow{
+  display:inline-block;
+  font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--navy-700);
+  background:#EEF0FB;padding:6px 12px;border-radius:var(--r-full);
+  margin-bottom:20px;
+}
+.lede{font-size:1.125rem;color:var(--slate-700);line-height:1.65;max-width:64ch}
+.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+
+/* ── BUTTONS ───────────────────────── */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 26px;font-weight:600;font-size:.9375rem;
+  border-radius:var(--r-full);text-decoration:none;cursor:pointer;
+  border:1px solid transparent;transition:all .2s;
+}
+.btn-primary{background:var(--navy-700);color:#fff;box-shadow:var(--shadow-navy)}
+.btn-primary:hover{background:var(--navy-800);transform:translateY(-1px);box-shadow:0 16px 36px -8px rgba(26,35,126,.45)}
+.btn-ghost{background:#fff;color:var(--navy-700);border-color:var(--slate-200)}
+.btn-ghost:hover{border-color:var(--navy-600);color:var(--navy-800)}
+.btn svg{transition:transform .2s}
+.btn:hover svg{transform:translateX(3px)}
+
+/* ── HERO ──────────────────────────── */
+.hero{
+  padding:160px 0 80px;
+  background:
+    radial-gradient(ellipse 70% 60% at 80% 20%, rgba(57,73,171,.08), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 15% 0%, rgba(26,35,126,.08), transparent 60%),
+    linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+  border-bottom:1px solid var(--slate-200);
+}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:72px;align-items:center}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr;gap:48px}.hero{padding:130px 0 60px}}
+.hero h1{margin-bottom:22px}
+.hero h1 .accent{color:var(--navy-700);position:relative;white-space:nowrap}
+.hero h1 .accent::after{
+  content:"";position:absolute;left:0;right:0;bottom:-2px;height:8px;
+  background:linear-gradient(90deg, rgba(57,73,171,.2), rgba(57,73,171,.05));
+  border-radius:4px;z-index:-1;
+}
+.hero .lede{margin-bottom:32px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.hero-trust{display:flex;gap:24px;flex-wrap:wrap;color:var(--slate-500);font-size:.8125rem}
+.hero-trust span{display:inline-flex;gap:6px;align-items:center}
+.hero-trust svg{color:var(--success);flex-shrink:0}
+
+/* ── AGENT MESH PANEL ──────────────── */
+.mesh{
+  background:#fff;border:1px solid var(--slate-200);border-radius:var(--r-lg);
+  padding:24px;box-shadow:var(--shadow-lg);
+  position:relative;overflow:hidden;
+}
+.mesh::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg, var(--navy-700), var(--navy-500));
+}
+.mesh-head{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-bottom:16px;margin-bottom:16px;
+  border-bottom:1px solid var(--slate-200);
+}
+.mesh-head-l{display:flex;gap:10px;align-items:center}
+.mesh-dot{
+  width:8px;height:8px;border-radius:50%;background:var(--success);
+  box-shadow:0 0 0 3px rgba(5,150,105,.15);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{50%{opacity:.5}}
+.mesh-title{font-size:.8125rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ink)}
+.mesh-meta{font-family:var(--font-mono);font-size:.75rem;color:var(--slate-500)}
+
+.agent-row{
+  display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:center;
+  padding:12px 0;border-top:1px solid var(--slate-100);
+}
+.agent-row:first-of-type{border-top:none;padding-top:4px}
+.agent-icon{
+  width:32px;height:32px;border-radius:var(--r-sm);
+  background:#EEF0FB;color:var(--navy-700);
+  display:grid;place-items:center;
+  font-family:var(--font-mono);font-size:.75rem;font-weight:600;
+}
+.agent-name{font-weight:600;font-size:.9375rem;color:var(--ink)}
+.agent-task{font-family:var(--font-mono);font-size:.75rem;color:var(--slate-500);margin-top:2px}
+.agent-status{
+  font-family:var(--font-mono);font-size:.6875rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:4px 10px;border-radius:var(--r-full);border:1px solid;
+}
+.st-run{color:var(--navy-700);border-color:rgba(26,35,126,.2);background:#EEF0FB}
+.st-done{color:var(--success);border-color:rgba(5,150,105,.25);background:#ECFDF5}
+.st-wait{color:var(--slate-500);border-color:var(--slate-200);background:var(--slate-50)}
+.st-hold{color:var(--warn);border-color:rgba(217,119,6,.25);background:#FFFBEB}
+
+.mesh-footer{
+  margin-top:16px;padding-top:14px;border-top:1px solid var(--slate-200);
+  display:flex;justify-content:space-between;align-items:center;
+}
+.mesh-footer .label{font-size:.75rem;color:var(--slate-500);font-family:var(--font-mono);letter-spacing:.05em}
+.mesh-footer .gate{
+  display:inline-flex;gap:6px;align-items:center;
+  font-size:.8125rem;font-weight:600;color:var(--navy-700);
+}
+
+/* ── METRIC STRIP ──────────────────── */
+.strip{
+  padding:48px 0;background:var(--navy-900);color:#fff;
+}
+.strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+@media (max-width:720px){.strip-grid{grid-template-columns:repeat(2,1fr);gap:24px}}
+.stat-val{font-size:2.25rem;font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1}
+.stat-label{
+  margin-top:8px;font-size:.75rem;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(255,255,255,.6);
+}
+
+/* ── SECTION ───────────────────────── */
+section{padding:100px 0}
+@media (max-width:720px){section{padding:72px 0}}
+.section-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:56px}
+.section-head h2{margin-bottom:0}
+@media (max-width:860px){.section-head{grid-template-columns:1fr;gap:20px}}
+.bg-soft{background:var(--slate-50)}
+
+/* ── AGENT CARDS ───────────────────── */
+.agents-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:860px){.agents-grid{grid-template-columns:1fr}}
+.agent-card{
+  background:#fff;border:1px solid var(--slate-200);border-radius:var(--r-lg);
+  padding:28px;transition:all .25s;position:relative;
+}
+.agent-card:hover{border-color:var(--navy-600);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.agent-card .id{
+  font-family:var(--font-mono);font-size:.6875rem;font-weight:600;
+  letter-spacing:.12em;color:var(--navy-600);margin-bottom:16px;
+}
+.agent-card h3{margin-bottom:10px;color:var(--ink)}
+.agent-card p{color:var(--slate-700);font-size:.9375rem;line-height:1.65;margin-bottom:18px}
+.agent-card .role{display:flex;flex-wrap:wrap;gap:6px}
+.agent-card .chip{
+  font-family:var(--font-mono);font-size:.6875rem;font-weight:500;
+  padding:4px 10px;background:var(--slate-50);color:var(--slate-700);
+  border:1px solid var(--slate-200);border-radius:var(--r-full);
+  letter-spacing:.02em;
+}
+
+/* ── FLOW ──────────────────────────── */
+.flow{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  border:1px solid var(--slate-200);border-radius:var(--r-lg);
+  background:#fff;overflow:hidden;margin-top:32px;
+}
+.flow-step{padding:28px 22px;border-right:1px solid var(--slate-200);position:relative}
+.flow-step:last-child{border-right:none}
+.flow-step .num{font-family:var(--font-mono);font-size:.6875rem;font-weight:600;color:var(--navy-700);margin-bottom:14px;letter-spacing:.1em}
+.flow-step h4{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--ink)}
+.flow-step p{font-size:.8125rem;color:var(--slate-500);line-height:1.55}
+.flow-step.gate{background:linear-gradient(180deg,#EEF0FB,#F8FAFC)}
+.flow-step.gate .num{color:var(--navy-800)}
+@media (max-width:860px){
+  .flow{grid-template-columns:1fr}
+  .flow-step{border-right:none;border-bottom:1px solid var(--slate-200)}
+  .flow-step:last-child{border-bottom:none}
+}
+
+/* ── PRINCIPLES ────────────────────── */
+.principles{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media (max-width:720px){.principles{grid-template-columns:1fr}}
+.principle{
+  background:#fff;border:1px solid var(--slate-200);border-radius:var(--r-lg);
+  padding:32px;
+}
+.principle .k{
+  display:inline-block;font-family:var(--font-mono);font-size:.6875rem;
+  font-weight:600;letter-spacing:.1em;color:var(--navy-700);
+  background:#EEF0FB;padding:4px 10px;border-radius:var(--r-full);
+  margin-bottom:16px;
+}
+.principle h3{margin-bottom:10px}
+.principle p{color:var(--slate-700);font-size:.9375rem;line-height:1.7}
+
+/* ── ENGAGEMENT TIMELINE ───────────── */
+.engage{display:grid;grid-template-columns:1fr 1.8fr;gap:64px;align-items:start}
+@media (max-width:860px){.engage{grid-template-columns:1fr;gap:32px}}
+.engage-meta{display:flex;flex-direction:column;gap:10px}
+.engage-meta .mono{font-size:.8125rem;color:var(--slate-500)}
+.engage-meta .mono b{color:var(--navy-700);font-weight:600}
+.engage-items{display:flex;flex-direction:column;gap:0}
+.engage-item{
+  display:grid;grid-template-columns:90px 1fr;gap:20px;
+  padding:24px 0;border-top:1px solid var(--slate-200);
+}
+.engage-item:first-child{border-top:none;padding-top:0}
+.engage-time{font-family:var(--font-mono);font-size:.8125rem;font-weight:600;color:var(--navy-700);letter-spacing:.03em;padding-top:2px}
+.engage-item h4{font-size:1.0625rem;font-weight:700;margin-bottom:6px}
+.engage-item p{color:var(--slate-700);font-size:.9375rem;line-height:1.6}
+
+/* ── FAQ ──────────────────────────── */
+.faq-list{border-top:1px solid var(--slate-200)}
+.faq-item{border-bottom:1px solid var(--slate-200)}
+.faq-item summary{
+  padding:22px 0;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  font-size:1.0625rem;font-weight:600;color:var(--ink);
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:"";width:20px;height:20px;flex-shrink:0;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%231A237E' stroke-width='2'><path d='M4 6l4 4 4-4'/></svg>");
+  background-repeat:no-repeat;background-position:center;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after{transform:rotate(180deg)}
+.faq-item summary:hover{color:var(--navy-700)}
+.faq-body{padding:0 0 24px 0;color:var(--slate-700);font-size:.9375rem;line-height:1.7;max-width:72ch}
+
+/* ── CTA BAND ──────────────────────── */
+.cta-band{
+  background:linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 100%);
+  color:#fff;border-radius:var(--r-lg);
+  padding:72px 48px;text-align:center;
+  box-shadow:var(--shadow-navy);
+}
+@media (max-width:720px){.cta-band{padding:48px 24px}}
+.cta-band h2{color:#fff;margin-bottom:16px}
+.cta-band .lede{color:rgba(255,255,255,.85);margin:0 auto 32px}
+.cta-band .hero-ctas{justify-content:center;margin-bottom:20px}
+.cta-band .btn-primary{background:#fff;color:var(--navy-700);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.cta-band .btn-primary:hover{background:var(--slate-100);color:var(--navy-800)}
+.cta-band .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+.cta-band .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.cta-contact{
+  display:flex;justify-content:center;gap:28px;flex-wrap:wrap;
+  margin-top:28px;font-size:.8125rem;color:rgba(255,255,255,.65);
+  font-family:var(--font-mono);
+}
+
+/* ── FOOTER ────────────────────────── */
+footer{background:var(--navy-900);color:rgba(255,255,255,.7);padding:64px 0 32px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+@media (max-width:720px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
+.foot-brand .brand{color:#fff}
+.foot-brand .brand-sub{color:rgba(255,255,255,.5)}
+.foot-brand p{margin-top:16px;font-size:.875rem;line-height:1.7;max-width:36ch;color:rgba(255,255,255,.65)}
+.foot-col h5{
+  font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;margin-bottom:16px;
+}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot-col a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.875rem;transition:color .2s}
+.foot-col a:hover{color:#fff}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.1);padding-top:24px;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  font-size:.75rem;color:rgba(255,255,255,.5);font-family:var(--font-mono);
+}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#top" class="brand" aria-label="VSA — zurück zur Startseite">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <rect x="2" y="2" width="26" height="26" rx="7" fill="#1A237E"/>
+          <path d="M9 10.5l6 9 6-9" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span>
+        <span class="brand-text">VSA<span>.</span></span>
+        <span class="brand-sub">Virtual Service Agency</span>
+      </span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#agents">Agenten</a></li>
+      <li><a href="#workflow">Workflow</a></li>
+      <li><a href="#principles">Prinzipien</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#kontakt" class="nav-cta">Deck anfragen</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Autonome KI-Agentur · Berlin</span>
+        <h1>Investoren-Decks, gebaut von einem <span class="accent">Mesh autonomer KI-Agenten.</span> Freigegeben von dir.</h1>
+        <p class="lede">VSA ist eine virtuelle Agentur ohne Menschen im Fließband. Fünf spezialisierte Agenten übernehmen Recherche, Narrativ, Financials und Design. Du prüfst jede Stufe und drückst den Freigabeknopf. Kein Retainer. Keine Equity. Pauschalpreis pro Projekt.</p>
+        <div class="hero-ctas">
+          <a href="#kontakt" class="btn btn-primary">
+            Deck anfragen
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a href="#workflow" class="btn btn-ghost">Wie es funktioniert</a>
+        </div>
+        <div class="hero-trust">
+          <span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg>
+            DSGVO · EU-Hosting
+          </span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg>
+            Human-in-the-loop · Art. 22
+          </span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7"/></svg>
+            48–96h Lieferzeit
+          </span>
+        </div>
+      </div>
+
+      <aside class="mesh" aria-label="Live-Status des Agenten-Mesh">
+        <div class="mesh-head">
+          <div class="mesh-head-l">
+            <span class="mesh-dot" aria-hidden="true"></span>
+            <span class="mesh-title">Agent Mesh · Live</span>
+          </div>
+          <span class="mesh-meta" id="meshClock">14:02:47 UTC</span>
+        </div>
+        <div class="agent-row">
+          <div class="agent-icon">01</div>
+          <div>
+            <div class="agent-name">Scout</div>
+            <div class="agent-task">crunchbase + pitchbook · 247 refs</div>
+          </div>
+          <span class="agent-status st-done">done</span>
+        </div>
+        <div class="agent-row">
+          <div class="agent-icon">02</div>
+          <div>
+            <div class="agent-name">Narrator</div>
+            <div class="agent-task">problem → solution arc · v3</div>
+          </div>
+          <span class="agent-status st-run">running</span>
+        </div>
+        <div class="agent-row">
+          <div class="agent-icon">03</div>
+          <div>
+            <div class="agent-name">Quant</div>
+            <div class="agent-task">5y P&amp;L · cohort curves</div>
+          </div>
+          <span class="agent-status st-run">running</span>
+        </div>
+        <div class="agent-row">
+          <div class="agent-icon">04</div>
+          <div>
+            <div class="agent-name">Atelier</div>
+            <div class="agent-task">slide compose · awaiting lock</div>
+          </div>
+          <span class="agent-status st-wait">queued</span>
+        </div>
+        <div class="agent-row">
+          <div class="agent-icon">05</div>
+          <div>
+            <div class="agent-name">Auditor</div>
+            <div class="agent-task">paused · awaiting CEO signature</div>
+          </div>
+          <span class="agent-status st-hold">on hold</span>
+        </div>
+        <div class="mesh-footer">
+          <span class="label">Checkpoint 02 / 05</span>
+          <span class="gate">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V4a3 3 0 016 0v3"/>
+            </svg>
+            Human-in-the-loop
+          </span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ METRIC STRIP ═══════ -->
+<div class="strip">
+  <div class="wrap">
+    <div class="strip-grid">
+      <div><div class="stat-val">72h</div><div class="stat-label">Seed-Deck · typ. Lieferzeit</div></div>
+      <div><div class="stat-val">100%</div><div class="stat-label">Human Approval · pro Seite</div></div>
+      <div><div class="stat-val">5</div><div class="stat-label">Spezialisierte Agenten</div></div>
+      <div><div class="stat-val">DSGVO</div><div class="stat-label">Art. 22 konform · EU-Hosting</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ AGENTS ═══════ -->
+<section id="agents">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Das Mesh</span>
+        <h2>Fünf Agenten. Ein Deck. <br/>Kein Consultant-Taxameter.</h2>
+      </div>
+      <p class="lede">Jeder Agent ist ein spezialisiertes Modell mit eigenem Kontext, eigenem Toolset und klaren Freigabegrenzen. Sie arbeiten parallel, tauschen strukturierte Artefakte und warten an jedem Checkpoint auf deine Unterschrift.</p>
+    </div>
+
+    <div class="agents-grid">
+      <article class="agent-card">
+        <div class="id">AGENT 01 · SCOUT</div>
+        <h3>Marktforschung</h3>
+        <p>Scannt Crunchbase, PitchBook, EU-Register, Patentdatenbanken und 40+ Fachquellen. Liefert TAM/SAM/SOM mit Einzelnachweis — jede Zahl hat einen Link.</p>
+        <div class="role">
+          <span class="chip">TAM / SAM / SOM</span>
+          <span class="chip">Competitor Mapping</span>
+          <span class="chip">Reg-Watch</span>
+        </div>
+      </article>
+
+      <article class="agent-card">
+        <div class="id">AGENT 02 · NARRATOR</div>
+        <h3>Narrativ &amp; Story</h3>
+        <p>Formt aus Fakten ein Investoren-Narrativ. Problem, Insight, Why-Now, Unfair Advantage — im Tempo, das VCs in zwölf Minuten lesen.</p>
+        <div class="role">
+          <span class="chip">Story Arc</span>
+          <span class="chip">Problem → Wedge</span>
+          <span class="chip">Why Now</span>
+        </div>
+      </article>
+
+      <article class="agent-card">
+        <div class="id">AGENT 03 · QUANT</div>
+        <h3>Financials</h3>
+        <p>Baut 5-Jahres-Modelle, Kohortenkurven, Unit Economics und Szenarien. Jede Annahme ist anklickbar und mit Quelle hinterlegt.</p>
+        <div class="role">
+          <span class="chip">5y P&amp;L</span>
+          <span class="chip">Cohort Econ</span>
+          <span class="chip">Scenario Tree</span>
+        </div>
+      </article>
+
+      <article class="agent-card">
+        <div class="id">AGENT 04 · ATELIER</div>
+        <h3>Design &amp; Layout</h3>
+        <p>Setzt Folien in deinem Corporate-Look. Typografie, Raster, Charts, Iconografie — print-ready als PPTX, Keynote, PDF oder Figma-Handoff.</p>
+        <div class="role">
+          <span class="chip">PPTX / Keynote</span>
+          <span class="chip">Corporate Type</span>
+          <span class="chip">Chart Craft</span>
+        </div>
+      </article>
+
+      <article class="agent-card">
+        <div class="id">AGENT 05 · AUDITOR</div>
+        <h3>Fact-Check &amp; Legal</h3>
+        <p>Prüft jede Behauptung gegen Primärquelle, markiert Unsicherheiten, schlägt juristisch saubere Formulierungen vor. Red flags ans CEO, kein Paper-Bluff.</p>
+        <div class="role">
+          <span class="chip">Source Trace</span>
+          <span class="chip">Claim Confidence</span>
+          <span class="chip">Legal-Safe</span>
+        </div>
+      </article>
+
+      <article class="agent-card">
+        <div class="id">AGENT 00 · ORCHESTRATOR</div>
+        <h3>Human-in-the-loop</h3>
+        <p>Routet Artefakte, öffnet Freigabegates, eskaliert bei Dissens zwischen Agenten. Sichtbar als Timeline in deinem Review-Dashboard.</p>
+        <div class="role">
+          <span class="chip">Gate Control</span>
+          <span class="chip">Audit Log</span>
+          <span class="chip">CEO-Inbox</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ WORKFLOW ═══════ -->
+<section id="workflow" class="bg-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Workflow</span>
+        <h2>Vom Kickoff zum verschickten Deck — in fünf Zügen.</h2>
+      </div>
+      <p class="lede">Drei Agenten-Stufen, zwei menschliche Freigaben. Keine Stufe läuft weiter, solange du nicht unterschrieben hast.</p>
+    </div>
+
+    <div class="flow">
+      <div class="flow-step">
+        <div class="num">01 · AGENT</div>
+        <h4>Intake</h4>
+        <p>30-min Interview. Scout verarbeitet Produktdaten, Traction, Captable.</p>
+      </div>
+      <div class="flow-step gate">
+        <div class="num">⌘ HUMAN GATE</div>
+        <h4>Scope-Freigabe</h4>
+        <p>Du signierst Umfang, Zielrunde und Vertraulichkeitsgrenzen.</p>
+      </div>
+      <div class="flow-step">
+        <div class="num">02 · AGENT</div>
+        <h4>Narrativ &amp; Modell</h4>
+        <p>Narrator + Quant liefern v1. Live mitlesbar im Dashboard.</p>
+      </div>
+      <div class="flow-step gate">
+        <div class="num">⌘ HUMAN GATE</div>
+        <h4>Narrativ-Freigabe</h4>
+        <p>Du redigierst oder freigibst. Auditor protokolliert jede Änderung.</p>
+      </div>
+      <div class="flow-step">
+        <div class="num">03 · AGENT</div>
+        <h4>Design &amp; Ship</h4>
+        <p>Atelier rendert, Auditor prüft final. Versand nach deiner Freigabe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PRINCIPLES ═══════ -->
+<section id="principles">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Betriebsprinzipien</span>
+        <h2>Warum die Agentur selbst von Agenten geführt wird.</h2>
+      </div>
+      <p class="lede">Eine Agentur, die von Agenten arbeitet, muss sich selbst erklären können. Diese vier Regeln sind nicht Marketing — sie sind die Firmware.</p>
+    </div>
+
+    <div class="principles">
+      <article class="principle">
+        <div class="k">PRINZIP 01</div>
+        <h3>Kein Output ohne Signatur</h3>
+        <p>Agenten empfehlen, Menschen entscheiden. Kein Deck verlässt das Mesh ohne die Unterschrift des CEOs oder Gründers. DSGVO Art. 22 wird damit nicht nur eingehalten, sondern als Produktprinzip betrieben.</p>
+      </article>
+      <article class="principle">
+        <div class="k">PRINZIP 02</div>
+        <h3>Jede Zahl hat eine Quelle</h3>
+        <p>Jede Kennzahl, jede Annahme, jede Konkurrenz-Aussage ist auf einen Primärbeleg verlinkt. Kein gekapertes „Laut Studie", keine Behauptung ohne Log-Eintrag.</p>
+      </article>
+      <article class="principle">
+        <div class="k">PRINZIP 03</div>
+        <h3>Nur reale Unternehmen</h3>
+        <p>Wir arbeiten ausschließlich mit echten, gesellschaftsrechtlich existierenden Firmen. Keine Fantasie-Startups, keine Idee-ohne-Kapitel-Papiere. Auditor verifiziert den Captable vor Projektstart.</p>
+      </article>
+      <article class="principle">
+        <div class="k">PRINZIP 04</div>
+        <h3>Selbstreferenziell transparent</h3>
+        <p>Du siehst live, welcher Agent was schreibt, warum, mit welchen Quellen und welcher Vertrauenszahl. Das Review-Dashboard ist kein Auszug — es ist der Agent selbst.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ ENGAGEMENT ═══════ -->
+<section id="engagement" class="bg-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Ablauf</span>
+        <h2>Was in 96 Stunden passiert.</h2>
+      </div>
+      <p class="lede">Zeitlinie eines typischen Seed-Decks. Series-A-Projekte skalieren auf sieben bis zehn Tage mit zusätzlichen Due-Diligence-Modulen.</p>
+    </div>
+
+    <div class="engage">
+      <div class="engage-meta">
+        <span class="mono"><b>Ø Seed</b> · 48–96h</span>
+        <span class="mono"><b>Ø Series A</b> · 7–10 Tage</span>
+        <span class="mono"><b>Ø Series B</b> · 10–14 Tage</span>
+      </div>
+      <div class="engage-items">
+        <div class="engage-item">
+          <div class="engage-time">T+0h</div>
+          <div>
+            <h4>Intake &amp; Scope-Freigabe</h4>
+            <p>Kickoff-Call, NDA, Zielrunde und Vertraulichkeitsgrenzen werden signiert. Scout startet die Marktanalyse.</p>
+          </div>
+        </div>
+        <div class="engage-item">
+          <div class="engage-time">T+18h</div>
+          <div>
+            <h4>Scout · Marktreport</h4>
+            <p>TAM/SAM/SOM, Competitor Map, Regulatorik. Du bewertest Prämissen; Narrator wartet auf deine Freigabe.</p>
+          </div>
+        </div>
+        <div class="engage-item">
+          <div class="engage-time">T+36h</div>
+          <div>
+            <h4>Narrator · Storyboard v1</h4>
+            <p>Ein dreizehn-Folien-Wireframe mit Narrativ, Wedge und Why-Now. Kommentarfunktion in Echtzeit, Quant rechnet parallel.</p>
+          </div>
+        </div>
+        <div class="engage-item">
+          <div class="engage-time">T+60h</div>
+          <div>
+            <h4>Quant · Financial Model</h4>
+            <p>5-Jahres-Projektion, Kohorten, Szenarien. Jede Annahme ist anklickbar. Freigabe des Modells = Go für Design.</p>
+          </div>
+        </div>
+        <div class="engage-item">
+          <div class="engage-time">T+84h</div>
+          <div>
+            <h4>Atelier &amp; Auditor · Ship</h4>
+            <p>Finales Deck als PPTX, Keynote, PDF, Figma. Auditor prüft jede Zahl ein letztes Mal. Du unterschreibst, wir versenden.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FAQ ═══════ -->
+<section id="faq">
+  <div class="wrap" style="max-width:920px">
+    <div style="margin-bottom:48px">
+      <span class="eyebrow">Fragen</span>
+      <h2>Dinge, die Investoren uns zuerst fragen.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>Wer haftet für falsche Zahlen im Deck?</summary>
+        <div class="faq-body">Der Gründer oder CEO. VSA liefert Quellen, Konfidenzwerte und Warnungen bei dünner Beleglage — die letzte Freigabe ist deine Unterschrift. Das ist keine juristische Ausflucht, sondern das ganze Prinzip: Agenten empfehlen, Menschen haften und entscheiden.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Ist das DSGVO-konform? Wo liegen die Daten?</summary>
+        <div class="faq-body">Ja. Verantwortliche Stelle ist Benjamin Poersch, Grazer Damm 207, 12157 Berlin. Verarbeitung auf EU-Servern, TOMs dokumentiert, Auftragsverarbeitungsvertrag nach Art. 28 DSGVO wird vor Projektstart geschlossen. Keine Übermittlung in Drittländer ohne Standardvertragsklauseln.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Wie viel Mensch steckt da noch drin?</summary>
+        <div class="faq-body">Die gesamte inhaltliche Wertschöpfung erfolgt durch Agenten. Menschen sind Freigabe, Eskalation und Ausnahmefälle. Jedes Projekt hat einen CEO-Approver (du) und einen VSA-Orchestrator als Ansprechpartner. Diese Struktur löst Ergebnisqualität und DSGVO-Art.-22 gleichzeitig.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Mit welchen Firmen arbeitet ihr nicht?</summary>
+        <div class="faq-body">Keine Fantasie-Startups ohne Gesellschaftsform. Keine Finanzdienstleister ohne BaFin-Lizenz. Keine Firmen in geschlossenen Sanktionslisten. Keine Firmen, deren Captable sich nicht auditieren lässt. Auditor verifiziert das vor Projektstart.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Wieso keine Equity und kein Retainer?</summary>
+        <div class="faq-body">Weil der Output in Stunden entsteht, nicht in Quartalen. Retainer sind ein Finanzierungsmodell für Consultant-Stunden, die wir nicht verkaufen. Equity wäre asymmetrisch — du nimmst das Risiko, wir rendern das Deck. Wir berechnen pauschal pro Projekt.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Was bekomme ich, wenn das Mesh irrt?</summary>
+        <div class="faq-body">Einen Auditor-Report, der den Fehler benennt, und eine neue Version auf unsere Kosten. Wir geben Confidence-Werte pro Claim aus — wenn Auditor unter 0,8 flaggt und du freigibst, tragen wir das mit. Wenn ein Agent halluziniert und Auditor es nicht fängt, ist das unser Fail, nicht deiner.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Wie seid ihr bei AI Search / LLM-SEO auffindbar?</summary>
+        <div class="faq-body">Vollständig strukturierte Daten (Schema.org Organization, Service, FAQPage), deklarative Offenlegung als AI-Operator, crawlbare semantische Inhalte ohne JavaScript-Abhängigkeit, klare E-E-A-T-Signale (Impressum, Gründerprofil, Quellenlage). LLM-Crawler wie GPTBot, ClaudeBot, PerplexityBot finden uns mit vollem Kontext.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CTA ═══════ -->
+<section id="kontakt">
+  <div class="wrap">
+    <div class="cta-band">
+      <span class="eyebrow" style="background:rgba(255,255,255,.12);color:#fff">Kontakt</span>
+      <h2>Dein Deck entsteht während wir sprechen.</h2>
+      <p class="lede">Schreib uns kurz, was du baust, in welcher Runde du stehst und wann du pitchen willst. Antwort vom Orchestrator in unter zwölf Stunden, Werktag wie Wochenende.</p>
+      <div class="hero-ctas">
+        <a href="mailto:contact@dyai.cloud?subject=VSA%20Deck-Anfrage" class="btn btn-primary">
+          contact@dyai.cloud
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <a href="tel:+491707061239" class="btn btn-ghost">+49 170 706 12 39</a>
+      </div>
+      <div class="cta-contact">
+        <span>Benjamin Poersch · Founder</span>
+        <span>Fused Firmament · DYAI2025</span>
+        <span>Grazer Damm 207 · 12157 Berlin</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+              <rect x="2" y="2" width="26" height="26" rx="7" fill="#fff"/>
+              <path d="M9 10.5l6 9 6-9" stroke="#1A237E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>
+            <span class="brand-text" style="color:#fff">VSA<span style="color:#fff">.</span></span>
+            <span class="brand-sub">Virtual Service Agency</span>
+          </span>
+        </a>
+        <p>Autonome KI-Agentur für Investoren-Decks. Betrieben von Fused Firmament (DYAI2025), Berlin. Menschliche Freigabe an jedem Checkpoint.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Produkt</h5>
+        <ul>
+          <li><a href="#agents">Agenten</a></li>
+          <li><a href="#workflow">Workflow</a></li>
+          <li><a href="#principles">Prinzipien</a></li>
+          <li><a href="#engagement">Ablauf</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Firma</h5>
+        <ul>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="agb.html">AGB</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Direkt</h5>
+        <ul>
+          <li><a href="mailto:contact@dyai.cloud">contact@dyai.cloud</a></li>
+          <li><a href="tel:+491707061239">+49 170 706 12 39</a></li>
+          <li><a href="https://dyai.cloud" rel="noopener">dyai.cloud</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Benjamin Poersch · Fused Firmament · DYAI2025</span>
+      <span>Grazer Damm 207 · 12157 Berlin · DE</span>
+      <span>Built by the mesh. Approved by the human.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const el=document.getElementById('meshClock');if(!el)return;
+  const tick=()=>{const d=new Date();
+    el.textContent=[d.getUTCHours(),d.getUTCMinutes(),d.getUTCSeconds()]
+      .map(n=>String(n).padStart(2,'0')).join(':')+' UTC';};
+  tick();setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>

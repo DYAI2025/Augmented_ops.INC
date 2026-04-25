@@ -1,0 +1,12 @@
+{
+  "name": "msa-landingpage",
+  "version": "1.0.0",
+  "description": "MSA - Marketing Service Agency Landing Page",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}

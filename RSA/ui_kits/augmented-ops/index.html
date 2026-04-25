@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Augmented_Ops · Web UI Kit</title>
+<link rel="stylesheet" href="../../colors_and_type.css" />
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: var(--ao-font-ui); color: var(--ao-ink); background: #fff; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+
+  .nav-link { font-size: 14px; font-weight: 500; color: var(--ao-slate-700); text-decoration: none; transition: color .15s var(--ao-ease-out); }
+  .nav-link:hover { color: var(--ao-navy-700); }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--ao-navy-700); color: #fff;
+    padding: 11px 20px; border-radius: 9999px;
+    font-family: var(--ao-font-ui); font-weight: 600; font-size: 14px;
+    text-decoration: none; border: none; cursor: pointer;
+    box-shadow: var(--ao-shadow-navy);
+    transition: transform .15s var(--ao-ease-out), box-shadow .2s var(--ao-ease-out), background .2s;
+  }
+  .btn-primary:hover { background: var(--ao-navy-800); transform: translateY(-1px); box-shadow: var(--ao-shadow-navy-hover); }
+  .btn-primary:hover .arrow { transform: translateX(3px); }
+  .btn-primary:focus-visible { outline: none; box-shadow: var(--ao-shadow-focus), var(--ao-shadow-navy); }
+
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #fff; color: var(--ao-navy-700);
+    padding: 11px 20px; border: 1px solid var(--ao-slate-200); border-radius: 9999px;
+    font-family: var(--ao-font-ui); font-weight: 600; font-size: 14px;
+    text-decoration: none; cursor: pointer;
+    transition: border-color .15s var(--ao-ease-out), color .15s;
+  }
+  .btn-ghost:hover { border-color: var(--ao-navy-600); color: var(--ao-navy-800); }
+
+  .ao-card {
+    background: #fff; border: 1px solid var(--ao-slate-200);
+    border-radius: 16px; box-shadow: var(--ao-shadow-sm);
+    transition: transform .2s var(--ao-ease-out), border-color .15s, box-shadow .2s;
+  }
+  .ao-card:hover { transform: translateY(-2px); border-color: var(--ao-navy-600); box-shadow: var(--ao-shadow-md); }
+
+  @keyframes ao-pulse { 0%, 100% { opacity: 1 } 50% { opacity: .5 } }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="Navigation.jsx"></script>
+<script type="text/babel" src="HeroAgentMesh.jsx"></script>
+<script type="text/babel" src="MetricAndAgents.jsx"></script>
+<script type="text/babel" src="WorkflowFlow.jsx"></script>
+<script type="text/babel" src="Agencies.jsx"></script>
+
+<script type="text/babel">
+  function App() {
+    return (
+      <>
+        <Navigation />
+        <HeroAgentMesh />
+        <MetricStrip />
+        <AgentGrid />
+        <WorkflowFlow />
+        <AgencyGrid />
+        <CTABand />
+        <Footer />
+      </>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
