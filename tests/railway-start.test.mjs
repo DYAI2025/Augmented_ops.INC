@@ -86,6 +86,16 @@ describe('production server', () => {
     assert.equal(response.body, 'static asset');
   });
 
+  it('rejects malformed URI paths without crashing the server', async () => {
+    const response = await request(server, '/%E0%A4%A');
+
+    assert.equal(response.statusCode, 400);
+    assert.match(response.body, /malformed URI path/);
+
+    const healthResponse = await request(server, '/__health');
+    assert.equal(healthResponse.statusCode, 200);
+  });
+
   it('falls back to index.html for client-side routes', async () => {
     const response = await request(server, '/services/unknown-route');
 

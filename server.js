@@ -92,7 +92,21 @@ export function createServer({distDir = path.join(__dirname, 'dist')} = {}) {
       return;
     }
 
-    const staticFile = resolveStaticFile(distDir, request.url || '/');
+    let staticFile;
+
+    try {
+      staticFile = resolveStaticFile(distDir, request.url || '/');
+    } catch (error) {
+      if (error instanceof URIError) {
+        send(response, 400, 'Bad Request: malformed URI path', {
+          'Content-Type': 'text/plain; charset=utf-8',
+        });
+        return;
+      }
+
+      throw error;
+    }
+
     sendFile(response, staticFile || indexFile);
   });
 }
